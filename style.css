@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #bf2d2d;
+}
+
+
+/*  */
+
+#headerContainer>h1 {
+    font-size: large;
+    font-weight: bold;
+    color: #333;
+}
+
+#headerContainer>small {
+    font-size: small;
+    color: #666;
+}
+
+#headerContainer {
+    margin: 30px;
+    padding: 20px;
+    box-shadow: 5px 3px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+#formContainer {
+    margin: 30px;
+    padding: 20px;
+    box-shadow: 5px 3px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    background-color: white;
+}
+
+#formContainer>#studentForm>.input-field {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+#formContainer>#studentForm>.input-field>label {
+    display: flex;
+    flex-direction: column;
+}
+
+#formContainer > #studentForm >  :nth-last-child(1) > button {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#formContainer>#studentForm>.input-field>input {
+    display: flex;
+    flex-direction: column;
+}
+
+#listContainer>.list-item1 {
+    margin: 30px;
+    padding: 20px;
+    box-shadow: 5px 3px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    background-color: white;
+}
+
+#listContainer #listContainer>.list-item>h2 {
+    padding: 50px;
+}
+
+#listContainer>.list-item>p {
+    padding: 50px;
+}
+
+#listContainer>.list-item>#button1 {
+    padding: 50px;
+}
