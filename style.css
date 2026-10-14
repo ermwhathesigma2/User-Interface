@@ -7,21 +7,24 @@
 }
 
 body {
-    background-color: #bf2d2d;
+    background-color: #000000;
 }
 
 
 /*  */
 
-#headerContainer>h1 {
+#headerContainer > h1 {
     font-size: large;
     font-weight: bold;
     color: #333;
+    text-align: center;
 }
 
-#headerContainer>small {
-    font-size: small;
-    color: #666;
+#headerContainer > small {
+  font-size: small;
+  color: #666;
+  display: block;
+  text-align: center;
 }
 
 #headerContainer {
@@ -30,12 +33,11 @@ body {
     box-shadow: 5px 3px rgba(0, 0, 0, 0.03);
     border-radius: 10px;
     background-color: white;
-    text-align: center;
 }
 
 #formContainer {
     margin: 30px;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 5px 3px rgba(0, 0, 0, 0.03);
     border-radius: 10px;
     background-color: white;
@@ -52,35 +54,104 @@ body {
     flex-direction: column;
 }
 
-#formContainer > #studentForm >  :nth-last-child(1) > button {
-    justify-content: center;
-    align-items: center;
+#studentForm > .input-field > label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+#formContainer > #studentForm > :nth-last-child(1) > button {
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #444e57;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 120px;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+#formContainer>#studentForm> .input-field > input {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+#studentForm > .input-field > input {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
 }
 
-#formContainer>#studentForm>.input-field>input {
-    display: flex;
-    flex-direction: column;
+#studentForm > .input-field > input:focus {
+    border-color: #000000;
 }
 
-#listContainer>.list-item1 {
-    margin: 30px;
-    padding: 20px;
+#listContainer{
+    padding: 12px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+#listContainer>.list-item {
+    margin: 10px;
+    padding: 10px;
     box-shadow: 5px 3px rgba(0, 0, 0, 0.03);
     border-radius: 10px;
     background-color: white;
 }
 
-#listContainer #listContainer>.list-item>h2 {
-    padding: 50px;
+#listContainer #listContainer> .list-item > h2 {
+    padding: 10px;
 }
 
-#listContainer>.list-item>p {
-    padding: 50px;
+#listContainer>.list-item> p {
+    padding: 10px;
 }
 
-#listContainer>.list-item>#button1 {
-    padding: 50px;
+#listContainer> .list-item > #button {
+    padding: 10px;
+}
+
+@media (width <= 320px){
+    #listContainer > .list-item{
+        grid-column: span 12;
+        margin: 40px;
+        padding: 24px;
+    }
+}
+
+@media (width > 1000px){
+    #listContainer > .list-item{
+        grid-column: span 2;
+        margin: 20px;
+        padding: 24px;
+    }
+}
+
+@media (width > 320px) and (width <= 1000px){
+    #listContainer > .list-item{
+        grid-column: span 4;
+        
+        
+    }
 }
